@@ -1,5 +1,4 @@
 import { Box, Flex, Text, IconButton, useDisclosure, Stack } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -10,7 +9,7 @@ const Navbar = () => {
         <Text fontSize="xl" color="white">MyApp</Text>
         <IconButton
           size="md"
-          icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+          icon={isOpen ? "X" : "≡"}
           aria-label="Open Menu"
           display={{ md: "none" }}
           onClick={isOpen ? onClose : onOpen}
